@@ -1,5 +1,8 @@
-#### **Python version:**  3.11.6
-#### **Packages version:**  
+# Spam classifier
+> This project implements a spam classifier using a Naive Bayes classifier and tf-idf (Term Frequency-Inverse Document Frequency) weighting. The classifier can distinguish between spam and non-spam messages based on a trained model.
+
+### **Python version:**  3.11.6
+### **Packages version:**  
 scikit-learn    1.3.2  
 nltk            3.8.1  
 pandas          2.1.4  
@@ -19,3 +22,10 @@ tqdm            4.66.1
 tzdata          2023.3  
 wheel           0.41.2  
 
+### Training Data
+
+The training of the spam classifier requires a labeled dataset containing examples
+of both spam and non-spam messages. In this project,
+the training data can be obtained from the following source:
+
+https://www.kaggle.com/datasets/chandramoulinaidu/spam-classification-for-basic-nlp/data

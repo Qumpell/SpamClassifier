@@ -15,7 +15,6 @@ stopword = nltk.corpus.stopwords.words('english')
 
 df['MESSAGE'] = df['MESSAGE'].apply(lambda x: ' '.join([word for word in word_tokenize(x) if word not in stopword]))
 
-# tf = TfidfVectorizer(ngram_range=(1, 3), max_features=2500)
 tf = TfidfVectorizer(min_df=5, max_features=2500)
 X = tf.fit_transform(df["MESSAGE"]).toarray()
 y = df["CATEGORY"]
@@ -29,5 +28,5 @@ model.fit(x_train, y_train)
 train_pred = model.predict(x_train)
 test_pred = model.predict(x_test)
 
-# print(classification_report(train_pred, y_train))
+print(classification_report(train_pred, y_train))
 print(classification_report(test_pred, y_test))
